@@ -15,7 +15,10 @@ describe("tabs/Tabs", () => {
         <Tab label="hello" active>
           world
         </Tab>
-        <Tab label="boom" render={({ key }) => <button key={key} />}>
+        <Tab
+          label="boom"
+          render={({ key }) => <button key={key} type="button" />}
+        >
           bang
         </Tab>
       </Tabs>

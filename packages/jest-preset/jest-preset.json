@@ -23,7 +23,7 @@
   "modulePaths": ["node_modules"],
   "moduleFileExtensions": ["js", "jsx", "json"],
   "setupFiles": ["raf/polyfill"],
-  "setupTestFrameworkScriptFile": "@hig/jest-preset/setupTests.js",
+  "setupFilesAfterEnv": "@hig/jest-preset/setupTests.js",
   "testPathIgnorePatterns": [
     "docs",
     "packages/babel-preset",

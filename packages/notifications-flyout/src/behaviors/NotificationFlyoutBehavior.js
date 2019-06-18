@@ -94,14 +94,22 @@ class NotificationFlyoutBehavior extends Component {
   }
 
   /**
-   * @param {ParsedNotification[]} notifications
+   * Action to dismiss a notification
+   * @param {string} id
    */
-  deriveUnreadCount() {
-    return this.getNotifications().reduce(
-      (count, { unread }) => (unread ? count + 1 : count),
-      0
-    );
-  }
+  dismissNotification = id => {
+    this.setState({
+      // eslint-disable-next-line react/no-access-state-in-setstate
+      dismissedNotifications: this.state.dismissedNotifications.concat(id)
+    });
+  };
+
+  /**
+   * Handler for when the flyout opens
+   */
+  handleClose = () => {
+    this.markAllNotificationsRead();
+  };
 
   /** @type {Props} */
   props;
@@ -121,21 +129,14 @@ class NotificationFlyoutBehavior extends Component {
   }
 
   /**
-   * Action to dismiss a notification
-   * @param {string} id
+   * @param {ParsedNotification[]} notifications
    */
-  dismissNotification = id => {
-    this.setState({
-      dismissedNotifications: this.state.dismissedNotifications.concat(id)
-    });
-  };
-
-  /**
-   * Handler for when the flyout opens
-   */
-  handleClose = () => {
-    this.markAllNotificationsRead();
-  };
+  deriveUnreadCount() {
+    return this.getNotifications().reduce(
+      (count, { unread }) => (unread ? count + 1 : count),
+      0
+    );
+  }
 
   /**
    * @returns {import("react").ReactElement}

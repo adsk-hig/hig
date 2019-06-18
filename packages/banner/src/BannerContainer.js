@@ -57,17 +57,6 @@ export default class BannerContainer extends Component {
     this.cancelWrappingUpdate();
   }
 
-  /** @type {BannerContainerProps | any} */
-  props;
-  /** @type {HTMLDivElement | undefined} */
-  content;
-  /** @type {HTMLDivElement | undefined} */
-  interactionsWrapper;
-  /** @type {HTMLParagraphElement | undefined} */
-  notification;
-  /** @type {number | undefined} */
-  wrappingFrame;
-
   /**
    * @param {HTMLDivElement} element
    */
@@ -91,6 +80,32 @@ export default class BannerContainer extends Component {
 
   handleResize = () => {
     this.updateWrapping();
+  };
+
+  /**
+   * @param {Function} callback
+   */
+  updateContentWrapping = callback => {
+    const update = { isWrappingContent: this.shouldWrapContent() };
+
+    this.setState(update, () => {
+      delete this.wrappingFrame;
+
+      if (callback) callback();
+    });
+  };
+
+  /**
+   * @param {Function} callback
+   */
+  updateActionWrapping = callback => {
+    const update = { isWrappingActions: this.shouldWrapActions() };
+
+    this.setState(update, () => {
+      this.wrappingFrame = window.requestAnimationFrame(() => {
+        this.updateContentWrapping(callback);
+      });
+    });
   };
 
   /**
@@ -138,31 +153,20 @@ export default class BannerContainer extends Component {
     return contentChildrenWidth > contentWidth;
   }
 
-  /**
-   * @param {Function} callback
-   */
-  updateContentWrapping = callback => {
-    const update = { isWrappingContent: this.shouldWrapContent() };
+  /** @type {BannerContainerProps | any} */
+  props;
 
-    this.setState(update, () => {
-      delete this.wrappingFrame;
+  /** @type {HTMLDivElement | undefined} */
+  content;
 
-      if (callback) callback();
-    });
-  };
+  /** @type {HTMLDivElement | undefined} */
+  interactionsWrapper;
 
-  /**
-   * @param {Function} callback
-   */
-  updateActionWrapping = callback => {
-    const update = { isWrappingActions: this.shouldWrapActions() };
+  /** @type {HTMLParagraphElement | undefined} */
+  notification;
 
-    this.setState(update, () => {
-      this.wrappingFrame = window.requestAnimationFrame(() => {
-        this.updateContentWrapping(callback);
-      });
-    });
-  };
+  /** @type {number | undefined} */
+  wrappingFrame;
 
   /**
    * Asynchronously updates the wrapping behavior of the presenter

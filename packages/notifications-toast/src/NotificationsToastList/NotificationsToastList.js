@@ -10,6 +10,7 @@ const MAX_TOASTS_ONSCREEN = 3;
 
 export default class NotificationsToastList extends React.Component {
   static AVAILABLE_PLACEMENTS = AVAILABLE_PLACEMENTS;
+
   static placements = placements;
 
   render() {

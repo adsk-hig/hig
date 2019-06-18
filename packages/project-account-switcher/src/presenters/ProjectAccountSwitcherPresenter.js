@@ -44,6 +44,8 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     )
   };
 
+  createTargetHandlers = memoizeCreateButtonEventHandlers();
+
   // this method constructs the image placeholder for the combination of
   // the current activeAccountObj and/or activeProjectObj,
   // in lieu of an image for either
@@ -75,8 +77,6 @@ export default class ProjectAccountSwitcherPresenter extends Component {
 
     return activeAccountImage || activeProjectImage || "";
   }
-
-  createTargetHandlers = memoizeCreateButtonEventHandlers();
 
   renderLabel() {
     const { activeLabel, activeAccountObj, activeProjectObj } = this.props;

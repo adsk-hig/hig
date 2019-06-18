@@ -108,29 +108,6 @@ class BannerAnimator extends Component {
     }
   }
 
-  expand() {
-    window.requestAnimationFrame(() => {
-      this.setState(animateExpand);
-    });
-  }
-
-  collapse() {
-    window.requestAnimationFrame(() => {
-      this.setState(animateCollapse);
-    });
-  }
-
-  collapseFromExpanded() {
-    window.requestAnimationFrame(() => {
-      this.setState(prepareCollapse, () => {
-        this.collapse();
-      });
-    });
-  }
-
-  /** @type {BannerAnimatorProps} */
-  props;
-
   handleReady = () => {
     const { status } = this.state;
 
@@ -165,6 +142,29 @@ class BannerAnimator extends Component {
   refInnerWrapper = innerWrapper => {
     this.setState({ innerWrapper });
   };
+
+  /** @type {BannerAnimatorProps} */
+  props;
+
+  expand() {
+    window.requestAnimationFrame(() => {
+      this.setState(animateExpand);
+    });
+  }
+
+  collapse() {
+    window.requestAnimationFrame(() => {
+      this.setState(animateCollapse);
+    });
+  }
+
+  collapseFromExpanded() {
+    window.requestAnimationFrame(() => {
+      this.setState(prepareCollapse, () => {
+        this.collapse();
+      });
+    });
+  }
 
   render() {
     const { children: renderChildren } = this.props;

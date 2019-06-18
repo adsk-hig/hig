@@ -163,14 +163,6 @@ export default class Flyout extends Component {
     this.setState({ open });
   }
 
-  isOpenControlled() {
-    return this.props.open !== undefined;
-  }
-
-  isOpen() {
-    return this.isOpenControlled() ? this.props.open : this.state.open;
-  }
-
   handleChildMouseEnter = () => {
     if (this.props.openOnHover) {
       this.setOpen(true);
@@ -234,6 +226,14 @@ export default class Flyout extends Component {
   hideFlyout = () => {
     this.setOpen(false);
   };
+
+  isOpen() {
+    return this.isOpenControlled() ? this.props.open : this.state.open;
+  }
+
+  isOpenControlled() {
+    return this.props.open !== undefined;
+  }
 
   toggleOpen() {
     this.setOpen(!this.state.open);

@@ -23,6 +23,7 @@
     "@hig/typography": "^1.0.3",
     "@hig/utils": "^0.3.0",
     "emotion": "^10.0.0",
+    "lodash.memoize": "^4.1.2",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
   },

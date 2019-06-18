@@ -57,6 +57,7 @@ export default class Module extends Component {
    */
   createMinimizeToggler = callback => () => {
     this.setState(
+      // eslint-disable-next-line react/no-access-state-in-setstate
       { minimized: !this.state.minimized },
       () => callback && callback()
     );

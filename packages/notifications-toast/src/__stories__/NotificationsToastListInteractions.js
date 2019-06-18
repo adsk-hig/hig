@@ -26,6 +26,7 @@ export default class NotificationsToastListInteractions extends React.Component 
   }
 
   addRandomToast = () => {
+    // eslint-disable-next-line react/no-access-state-in-setstate
     const currentToasts = this.state.toasts.slice();
     currentToasts.push(this._generateToast());
     this.setState({ toasts: currentToasts });
@@ -37,6 +38,7 @@ export default class NotificationsToastListInteractions extends React.Component 
     );
 
     if (childIndexToRemove > -1) {
+      // eslint-disable-next-line react/no-access-state-in-setstate
       const nextToasts = this.state.toasts.slice();
       nextToasts.splice(childIndexToRemove, 1);
       this.setState({ toasts: nextToasts });

@@ -130,6 +130,21 @@ export default class MultiDownshift extends React.Component {
   };
 
   /**
+   * @param {any} selectedItem
+   * @param {import("downshift").ControllerStateAndHelpers} downshift
+   */
+  handleSelect = (selectedItem, downshift) => {
+    const selectedItems = this.getSelectedItems();
+    const triggerChange = this.createChangeTrigger(downshift);
+
+    if (selectedItems.includes(selectedItem)) {
+      this.unselectItem(selectedItem, triggerChange);
+    } else {
+      this.selectItem(selectedItem, triggerChange);
+    }
+  };
+
+  /**
    * @param {import("downshift").ControllerStateAndHelpers} downshift
    */
   createChangeTrigger(downshift) {
@@ -144,21 +159,6 @@ export default class MultiDownshift extends React.Component {
       }
     };
   }
-
-  /**
-   * @param {any} selectedItem
-   * @param {import("downshift").ControllerStateAndHelpers} downshift
-   */
-  handleSelect = (selectedItem, downshift) => {
-    const selectedItems = this.getSelectedItems();
-    const triggerChange = this.createChangeTrigger(downshift);
-
-    if (selectedItems.includes(selectedItem)) {
-      this.unselectItem(selectedItem, triggerChange);
-    } else {
-      this.selectItem(selectedItem, triggerChange);
-    }
-  };
 
   /**
    * @returns {string}

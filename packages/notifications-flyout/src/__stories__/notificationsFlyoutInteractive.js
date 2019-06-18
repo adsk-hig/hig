@@ -44,6 +44,7 @@ class App extends Component {
 
   handleButtonClick = () => {
     this.setState({
+      // eslint-disable-next-line react/no-access-state-in-setstate
       notifications: [createNotification(), ...this.state.notifications]
     });
   };

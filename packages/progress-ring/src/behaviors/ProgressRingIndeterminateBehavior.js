@@ -38,18 +38,6 @@ export default class ProgressRingIndeterminateBehavior extends Component {
     });
   }
 
-  initSegments() {
-    this.segments = Array.from(
-      this.containerRef.querySelectorAll(".hig__progress-ring__segment")
-    );
-
-    this.containerRef.querySelector(
-      ".hig__progress-ring__mask"
-    ).style.opacity = null;
-    this.SEGMENT_COUNT = this.segments.length;
-    this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
-  }
-
   step = timestamp => {
     if (!this.playing) {
       return;
@@ -85,15 +73,27 @@ export default class ProgressRingIndeterminateBehavior extends Component {
     this.setState({ cssTransitionState: "exited" });
   };
 
-  /** @type {HTMLDivElement} */
-  containerRef;
-
   /**
    * @param {HTMLDivElement} containerRef
    */
   refContainer = containerRef => {
     this.containerRef = containerRef;
   };
+
+  /** @type {HTMLDivElement} */
+  containerRef;
+
+  initSegments() {
+    this.segments = Array.from(
+      this.containerRef.querySelectorAll(".hig__progress-ring__segment")
+    );
+
+    this.containerRef.querySelector(
+      ".hig__progress-ring__mask"
+    ).style.opacity = null;
+    this.SEGMENT_COUNT = this.segments.length;
+    this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
+  }
 
   opacityForSegment(index, elapsedThisCycle) {
     const segmentFadeStartTime = index * this.SEGMENT_DELAY_FACTOR;

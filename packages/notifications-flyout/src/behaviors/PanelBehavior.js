@@ -47,20 +47,22 @@ export default class PanelBehavior extends Component {
     this.unbindResize();
   }
 
+  handleResize = () => {
+    this.updateMaxHeight();
+  };
+
   /**
-   * @type {HTMLDivElement}
+   * @param {HTMLDivElement} listWrapperRef
    */
-  listWrapperRef;
+  refListWrapper = listWrapperRef => {
+    this.listWrapperRef = listWrapperRef;
+  };
 
   updateMaxHeight() {
     this.setState({
       listMaxHeight: calculateListMaxHeight(this.listWrapperRef)
     });
   }
-
-  handleResize = () => {
-    this.updateMaxHeight();
-  };
 
   bindResize() {
     window.addEventListener("resize", this.handleResize);
@@ -71,11 +73,9 @@ export default class PanelBehavior extends Component {
   }
 
   /**
-   * @param {HTMLDivElement} listWrapperRef
+   * @type {HTMLDivElement}
    */
-  refListWrapper = listWrapperRef => {
-    this.listWrapperRef = listWrapperRef;
-  };
+  listWrapperRef;
 
   render() {
     const { refListWrapper } = this;

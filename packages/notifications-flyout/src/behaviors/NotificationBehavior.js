@@ -28,9 +28,6 @@ export default class NotificationBehavior extends Component {
     isVisible: true
   };
 
-  /** @type {HTMLDivElement} */
-  containerRef;
-
   /**
    * @param {HTMLDivElement} containerRef
    */
@@ -47,6 +44,9 @@ export default class NotificationBehavior extends Component {
   handleDismissButtonClick = () => {
     this.hide();
   };
+
+  /** @type {HTMLDivElement} */
+  containerRef;
 
   /**
    * Sets the current height of the notification

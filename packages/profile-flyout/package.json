@@ -19,6 +19,7 @@
   "dependencies": {
     "@hig/avatar": "^1.0.6",
     "@hig/flyout": "^1.0.5",
+    "@hig/theme-context": "^2.1.0",
     "@hig/utils": "^0.3.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"

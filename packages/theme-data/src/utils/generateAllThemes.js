@@ -1,6 +1,6 @@
 import camelcase from "camelcase";
-import extendTheme from "../utils/extendTheme";
-import resolveRoles from "../utils/resolveTheme";
+import extendTheme from "./extendTheme";
+import resolveRoles from "./resolveTheme";
 
 function buildName(colorScheme, density) {
   return [

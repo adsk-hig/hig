@@ -99,6 +99,10 @@ class Tabs extends Component {
     };
   }
 
+  createTabEventHandlers = memoize(index =>
+    createButtonEventHandlers(() => this.setActiveTab(index))
+  );
+
   /** @returns {TabMeta[]} */
   getTabs() {
     return createTabs(this.props.children);
@@ -123,10 +127,6 @@ class Tabs extends Component {
     onTabChange(nextActiveTabIndex);
     this.setState({ activeTabIndex: nextActiveTabIndex });
   }
-
-  createTabEventHandlers = memoize(index =>
-    createButtonEventHandlers(() => this.setActiveTab(index))
-  );
 
   /**
    * @param {TabMeta} tab

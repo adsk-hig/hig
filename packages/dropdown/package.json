@@ -22,6 +22,7 @@
     "@hig/input": "^1.1.4",
     "emotion": "^10.0.0",
     "downshift": "^3.2.0",
+    "lodash.memoize": "^4.1.2",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
   },

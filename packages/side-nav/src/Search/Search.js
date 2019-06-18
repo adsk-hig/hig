@@ -85,18 +85,17 @@ export default class Search extends Component {
                 />
               </div>
 
-              {this.state.value &&
-                this.state.value.length > 0 && (
-                  <div
-                    className={css(styles.clear)}
-                    onClick={handleClick}
-                    onKeyDown={handleKeyDown}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <ClearSmall24 />
-                  </div>
-                )}
+              {this.state.value && this.state.value.length > 0 && (
+                <div
+                  className={css(styles.clear)}
+                  onClick={handleClick}
+                  onKeyDown={handleKeyDown}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <ClearSmall24 />
+                </div>
+              )}
             </div>
           );
         }}

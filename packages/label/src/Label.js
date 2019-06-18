@@ -34,7 +34,7 @@ class Label extends Component {
           const styles = stylesheet({ disabled, variant }, resolvedRoles);
 
           return (
-            // eslint-disable-next-line jsx-a11y/label-has-for
+            // eslint-disable-next-line jsx-a11y/label-has-associated-control, jsx-a11y/label-has-for
             <label style={styles.label} {...otherProps}>
               {children}
             </label>

@@ -89,6 +89,7 @@ Tab.defaultProps = {
       </ControlBehavior>
     );
   }
+  /* eslint-disable react/prop-types */
 };
 
 Tab.propTypes = {

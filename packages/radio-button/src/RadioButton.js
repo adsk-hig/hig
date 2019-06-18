@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
 import RadioButtonPresenter from "./presenters/RadioButtonPresenter";
@@ -50,3 +51,12 @@ export default function RadioButton(props) {
     </ControlBehavior>
   );
 }
+
+RadioButton.propTypes = {
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+  onMouseDown: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  onMouseUp: PropTypes.func
+};

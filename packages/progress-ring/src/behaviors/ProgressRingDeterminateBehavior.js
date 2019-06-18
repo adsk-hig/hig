@@ -53,72 +53,6 @@ export default class ProgressRingDeterminateBehavior extends Component {
     });
   }
 
-  initSegments() {
-    this.segments = Array.from(
-      this.containerRef.querySelectorAll(".hig__progress-ring__segment")
-    );
-    this.containerRef.querySelector(
-      ".hig__progress-ring__mask"
-    ).style.opacity = null;
-    this.SEGMENT_COUNT = this.segments.length;
-    this.FADE_DELAY_FACTOR = 1 / this.SEGMENT_COUNT;
-  }
-
-  progressTowardTarget(timestamp) {
-    const elapsed = timestamp - this.prevTimestamp;
-
-    let valueDiff;
-    if (this.targetValue > this.value) {
-      valueDiff = Math.min(
-        elapsed * MAX_INCREASE_PER_MS,
-        this.targetValue - this.value
-      );
-    } else if (this.targetValue < this.value) {
-      valueDiff = Math.max(
-        -elapsed * MAX_INCREASE_PER_MS,
-        this.targetValue - this.value
-      );
-    } else {
-      if (this.state.cssTransitionState !== "exited") {
-        this.setSegmentOpacities(this.value);
-      }
-      this.prevTimestamp = undefined;
-      return;
-    }
-
-    const interrumValue = this.value + valueDiff;
-
-    this.setSegmentOpacities(interrumValue);
-
-    this.prevTimestamp = timestamp;
-    this.value = interrumValue;
-
-    window.requestAnimationFrame(this.step);
-  }
-
-  enter() {
-    this.segments.forEach(segment => {
-      const eachSegment = segment;
-      eachSegment.style.opacity = 0;
-    });
-    this.setState({ transitionEnter: true });
-    this.wait();
-  }
-
-  exit() {
-    this.segments.forEach(segment => {
-      const eachSegment = segment;
-      eachSegment.style.opacity = null;
-    });
-    this.setState({ transitionEnter: false });
-    this.wait();
-  }
-
-  wait() {
-    this.prevTimestamp = window.performance.now();
-    window.requestAnimationFrame(this.step);
-  }
-
   step = timestamp => {
     if (
       this.state.cssTransitionState === "entering" ||
@@ -165,14 +99,81 @@ export default class ProgressRingDeterminateBehavior extends Component {
     this.setState({ cssTransitionState: "exited" });
   };
 
-  /** @type {HTMLDivElement} */
-  containerRef;
   /**
    * @param {HTMLDivElement} containerRef
    */
   refContainer = containerRef => {
     this.containerRef = containerRef;
   };
+
+  /** @type {HTMLDivElement} */
+  containerRef;
+
+  enter() {
+    this.segments.forEach(segment => {
+      const eachSegment = segment;
+      eachSegment.style.opacity = 0;
+    });
+    this.setState({ transitionEnter: true });
+    this.wait();
+  }
+
+  exit() {
+    this.segments.forEach(segment => {
+      const eachSegment = segment;
+      eachSegment.style.opacity = null;
+    });
+    this.setState({ transitionEnter: false });
+    this.wait();
+  }
+
+  wait() {
+    this.prevTimestamp = window.performance.now();
+    window.requestAnimationFrame(this.step);
+  }
+
+  initSegments() {
+    this.segments = Array.from(
+      this.containerRef.querySelectorAll(".hig__progress-ring__segment")
+    );
+    this.containerRef.querySelector(
+      ".hig__progress-ring__mask"
+    ).style.opacity = null;
+    this.SEGMENT_COUNT = this.segments.length;
+    this.FADE_DELAY_FACTOR = 1 / this.SEGMENT_COUNT;
+  }
+
+  progressTowardTarget(timestamp) {
+    const elapsed = timestamp - this.prevTimestamp;
+
+    let valueDiff;
+    if (this.targetValue > this.value) {
+      valueDiff = Math.min(
+        elapsed * MAX_INCREASE_PER_MS,
+        this.targetValue - this.value
+      );
+    } else if (this.targetValue < this.value) {
+      valueDiff = Math.max(
+        -elapsed * MAX_INCREASE_PER_MS,
+        this.targetValue - this.value
+      );
+    } else {
+      if (this.state.cssTransitionState !== "exited") {
+        this.setSegmentOpacities(this.value);
+      }
+      this.prevTimestamp = undefined;
+      return;
+    }
+
+    const interrumValue = this.value + valueDiff;
+
+    this.setSegmentOpacities(interrumValue);
+
+    this.prevTimestamp = timestamp;
+    this.value = interrumValue;
+
+    window.requestAnimationFrame(this.step);
+  }
 
   opacityForSegment(index, value) {
     const fadeStartValue = index * this.FADE_DELAY_FACTOR;

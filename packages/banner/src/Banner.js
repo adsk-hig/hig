@@ -26,12 +26,17 @@ import BannerPresenter from "./BannerPresenter";
 /** @type {Component<BannerProps>} */
 export default class Banner extends Component {
   static AVAILABLE_PLACEMENTS = AVAILABLE_PLACEMENTS;
+
   static AVAILABLE_TYPES = AVAILABLE_TYPES;
+
   static placements = placements;
+
   static types = types;
 
   static Action = BannerAction;
+
   static Interactions = BannerInteractions;
+
   static Presenter = BannerPresenter;
 
   static propTypes = {

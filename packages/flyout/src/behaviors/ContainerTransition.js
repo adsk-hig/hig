@@ -37,6 +37,10 @@ export default class ContainerTransition extends Component {
     return !this.state.isVisible ? transitionStatuses.HIDDEN : transitionState;
   }
 
+  handleExit = () => {
+    this.hide();
+  };
+
   beginExit() {
     window.requestAnimationFrame(() => {
       this.setState({ in: false });
@@ -58,10 +62,6 @@ export default class ContainerTransition extends Component {
       this.setState({ isVisible: false });
     });
   }
-
-  handleExit = () => {
-    this.hide();
-  };
 
   render() {
     return (

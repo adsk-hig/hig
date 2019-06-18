@@ -48,7 +48,9 @@ Surface.propTypes = {
     "extraExtraLarge",
     "none"
   ]),
-  level: PropTypes.oneOf(["100", "200", "250", "300", "350"])
+  level: PropTypes.oneOf(["100", "200", "250", "300", "350"]),
+  children: PropTypes.node,
+  style: PropTypes.objectOf(PropTypes.object())
 };
 
 Surface.defaultProps = {

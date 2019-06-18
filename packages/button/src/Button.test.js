@@ -133,6 +133,7 @@ describe("Button", () => {
       });
 
       it("is a <button> tag", () => {
+        // eslint-disable-next-line react/button-has-type
         expect(wrapper.matchesElement(<button>Button</button>));
       });
     });

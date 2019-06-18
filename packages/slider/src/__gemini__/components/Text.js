@@ -18,7 +18,8 @@ function stylesheet({ variant }, theme) {
       fontSize: theme["density.fontSizes.extraLarge"],
       margin: `0 0 ${theme["density.spacings.medium"]} 0`
     };
-  } else if (variant === "h2") {
+  }
+  if (variant === "h2") {
     return {
       ...defaults,
       fontSize: theme["density.fontSizes.large"],

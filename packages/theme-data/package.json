@@ -26,13 +26,14 @@
     "release": "hig-scripts-release"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/node": "^7.0.0",
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/typography": "^1.0.3",
-    "babel-cli": "^6.26.0",
     "camelcase": "^5.0.0",
     "style-dictionary": "^2.6.2"
   },

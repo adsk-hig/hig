@@ -120,16 +120,16 @@ export default class Slider extends Component {
     }
   }
 
-  isControlled() {
-    return this.props.value !== undefined;
-  }
-
   /**
    * @param {event} Event
    */
   handleChange = event => {
     this.setValue(event.target.value);
   };
+
+  isControlled() {
+    return this.props.value !== undefined;
+  }
 
   render() {
     const {
