@@ -35,7 +35,7 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-postcss": "^1.4.1",
     "rollup-plugin-react-svg": "^2.1.0",
-    "semantic-release": "15.5.0",
+    "semantic-release": "17.2.3",
     "semver": "^5.5.0"
   },
   "eslintConfig": {
