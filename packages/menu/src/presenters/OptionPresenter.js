@@ -20,7 +20,8 @@ export default class OptionPresenter extends Component {
     role: PropTypes.oneOf(AVAILABLE_ROLES),
     selected: PropTypes.bool,
     shortcut: PropTypes.node,
-    stylesheet: PropTypes.func
+    stylesheet: PropTypes.func,
+    unselect: PropTypes.bool
   };
 
   render() {
@@ -35,6 +36,7 @@ export default class OptionPresenter extends Component {
       role,
       selected,
       shortcut,
+      unselect,
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
@@ -80,6 +82,7 @@ export default class OptionPresenter extends Component {
               role,
               selected,
               shortcut,
+              unselect,
               stylesheet: customStylesheet
             },
             resolvedRoles

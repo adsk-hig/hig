@@ -7,11 +7,12 @@ const knobGroupIds = { basic: "Basic" };
 const knobLabels = {
   checkmark: "Checkmark",
   multiple: "Multiple",
-  onChange: "onChange"
+  onChange: "onChange",
+  unselect: "Unselect"
 };
 
 export default function getKnobs(props, component) {
-  const { checkmark, multiple, ...otherProps } = props;
+  const { checkmark, unselect, multiple, ...otherProps } = props;
   const conditionalKnobs =
     component === Menu
       ? {
@@ -27,6 +28,7 @@ export default function getKnobs(props, component) {
     ...otherProps,
     ...conditionalKnobs,
     multiple: boolean(knobLabels.multiple, multiple, knobGroupIds.basic),
+    unselect: boolean(knobLabels.unselect, unselect, knobGroupIds.basic),
     onChange: action(knobLabels.onChange)
   };
 }

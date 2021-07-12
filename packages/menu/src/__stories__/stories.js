@@ -15,6 +15,7 @@ export default [
     getProps: () => ({
       multiple: false,
       checkmark: false,
+      unselect: true,
       children: [
         <Option id="option-1" key="option-1">
           Option 1
@@ -39,6 +40,7 @@ export default [
     getProps: () => ({
       checkmark: false,
       multiple: false,
+      unselect: true,
       children: [
         <Menu id="shortcut-group" divider key="icon-group">
           <Option id="shortcut-header" role="presentation">

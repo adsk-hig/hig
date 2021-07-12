@@ -55,6 +55,7 @@ export default class Option extends Component {
       role,
       shortcut,
       stylesheet,
+      unselect,
       ...otherProps
     } = this.props;
     const {
@@ -110,6 +111,7 @@ export default class Option extends Component {
                 selected={isActive()}
                 shortcut={shortcut}
                 stylesheet={stylesheet}
+                unselect={unselect}
               >
                 {children}
               </OptionPresenter>

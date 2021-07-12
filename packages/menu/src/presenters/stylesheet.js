@@ -20,6 +20,7 @@ export default function stylesheet(props, themeData) {
     isPressed,
     role,
     selected,
+    unselect,
     stylesheet: customStylesheet
   } = props;
   const styles = {
@@ -62,6 +63,11 @@ export default function stylesheet(props, themeData) {
         ? {
             backgroundColor: themeData[`menu.item.pressed.backgroundColor`],
             transition: `background-color 0.3s cubic-bezier(0.4,0,0.2,1)`
+          }
+        : {}),
+      ...(isPressed && selected && !unselect
+        ? {
+            backgroundColor: themeData[`menu.item.hover.backgroundColor`]
           }
         : {}),
       ...(disabled

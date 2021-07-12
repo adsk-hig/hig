@@ -1,5 +1,142 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`menu/Menu renders Menu and Options with checkmark and unselect 1`] = `
+.emotion-6 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: ArtifaktElement,sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 400;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 700;
+}
+
+<ul
+  className="emotion-6"
+  id={undefined}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseMove={[Function]}
+  role="listbox"
+  selected={undefined}
+  tabIndex="0"
+  unselect={false}
+>
+  <li
+    aria-selected={false}
+    className="emotion-1"
+    disabled={undefined}
+    id="option-1"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 1
+    </div>
+  </li>
+  <li
+    aria-selected={true}
+    className="emotion-3"
+    disabled={undefined}
+    id="option-2"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={true}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 2
+    </div>
+  </li>
+  <li
+    aria-selected={false}
+    className="emotion-1"
+    disabled={undefined}
+    id="option-3"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 3
+    </div>
+  </li>
+</ul>
+`;
+
 exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
 .emotion-6 {
   box-sizing: border-box;
@@ -66,6 +203,7 @@ exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -259,6 +397,7 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -454,6 +593,7 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -617,6 +757,7 @@ exports[`menu/Menu renders default Menu and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}

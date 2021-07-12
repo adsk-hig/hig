@@ -143,6 +143,7 @@ exports[`menu/Option renders Menu and Options that are disabled 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -370,6 +371,7 @@ exports[`menu/Option renders Menu and Options with Avatars 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -632,6 +634,7 @@ exports[`menu/Option renders Menu and Options with Headers 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     className="emotion-1"
@@ -800,6 +803,7 @@ exports[`menu/Option renders Menu and Options with icons 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -982,6 +986,7 @@ exports[`menu/Option renders Menu and Options with shortcuts 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -1153,6 +1158,7 @@ exports[`menu/Option renders checkmark indicator Menu and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -1316,6 +1322,7 @@ exports[`menu/Option renders default Menu and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}

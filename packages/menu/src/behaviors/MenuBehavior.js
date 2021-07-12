@@ -71,7 +71,8 @@ export default class MenuBehavior extends Component {
     setActiveOption: PropTypes.func,
     setHighlightIndex: PropTypes.func,
     setOptionsInfo: PropTypes.func,
-    setPreviousEvent: PropTypes.func
+    setPreviousEvent: PropTypes.func,
+    unselect: PropTypes.bool
   };
 
   static defaultProps = {
@@ -108,11 +109,26 @@ export default class MenuBehavior extends Component {
   getOptionsInfo = () => this.state.optionInfo;
 
   setActiveOption = activeOption => {
-    if (this.props.onChange) {
-      this.props.onChange(activeOption);
+    const { onChange, unselect } = this.props;
+    if (onChange) {
+      if (unselect) {
+        this.props.onChange(activeOption);
+        this.setState({ activeOption });
+      } else {
+        let newActiveOption;
+        if (
+          activeOption.length === 0 ||
+          activeOption.length < this.state.activeOption.length
+        ) {
+          newActiveOption = this.state.activeOption;
+          this.props.onChange(this.state.activeOption);
+        } else {
+          newActiveOption = activeOption;
+          this.props.onChange(activeOption);
+        }
+        this.setState({ activeOption: newActiveOption });
+      }
     }
-
-    this.setState({ activeOption });
   };
 
   getActiveOption = () => this.state.activeOption;

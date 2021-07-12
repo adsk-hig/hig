@@ -68,7 +68,8 @@ export default class MenuPresenter extends Component {
       onFocus,
       selected,
       setActiveOption,
-      setHighlightIndex
+      setHighlightIndex,
+      unselect
     } = this.props;
     const payload = {
       ...props,
@@ -82,7 +83,8 @@ export default class MenuPresenter extends Component {
       onFocus,
       selected,
       setActiveOption,
-      setHighlightIndex
+      setHighlightIndex,
+      unselect
     };
 
     return <Option {...payload} />;

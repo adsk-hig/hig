@@ -51,4 +51,16 @@ describe("menu/Menu", () => {
     const tree = renderer.create(wrapper).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("renders Menu and Options with checkmark and unselect", () => {
+    const wrapper = (
+      <Menu defaultSelected={["option-2"]} unselect={false}>
+        <Option id="option-1">Option 1</Option>
+        <Option id="option-2">Option 2</Option>
+        <Option id="option-3">Option 3</Option>
+      </Menu>
+    );
+    const tree = renderer.create(wrapper).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

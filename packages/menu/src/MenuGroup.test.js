@@ -127,4 +127,28 @@ describe("menu/MenuGroup", () => {
     const tree = renderer.create(wrapper).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("renders Menus with checkmark and unselect", () => {
+    const wrapper = (
+      <MenuGroup>
+        <Menu checkmark unselect={false}>
+          <Option id="option-1">Option 1</Option>
+          <Option id="option-2">Option 2</Option>
+          <Option id="option-3">Option 3</Option>
+        </Menu>
+        <Menu divider>
+          <Option id="option-4">Option 4</Option>
+          <Option id="option-5">Option 5</Option>
+          <Option id="option-6">Option 6</Option>
+        </Menu>
+        <Menu checkmark>
+          <Option id="option-7">Option 7</Option>
+          <Option id="option-8">Option 8</Option>
+          <Option id="option-9">Option 9</Option>
+        </Menu>
+      </MenuGroup>
+    );
+    const tree = renderer.create(wrapper).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

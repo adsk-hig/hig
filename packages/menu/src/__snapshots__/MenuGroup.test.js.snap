@@ -1,5 +1,433 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
+.emotion-33 {
+  overflow-y: auto;
+  outline: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: ArtifaktElement,sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 400;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 18px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.emotion-1 > svg > * {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-19 {
+  border-bottom: 1px solid rgba(60,60,60,0.1);
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: ArtifaktElement,sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+<div
+  className="emotion-33"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseMove={[Function]}
+  role="listbox"
+  selected={undefined}
+  tabIndex="0"
+  unselect={true}
+>
+  <ul
+    className="emotion-12"
+    id={undefined}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseMove={[Function]}
+    role="group"
+    selected={undefined}
+    tabIndex="-1"
+    unselect={true}
+  >
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-1"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-1"
+      >
+        <svg
+          className="emotion-0"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+          />
+        </svg>
+      </div>
+      <div
+        className="emotion-2"
+      >
+        Option 1
+      </div>
+    </li>
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-2"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-1"
+      >
+        <svg
+          className="emotion-0"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+          />
+        </svg>
+      </div>
+      <div
+        className="emotion-2"
+      >
+        Option 2
+      </div>
+    </li>
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-3"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-1"
+      >
+        <svg
+          className="emotion-0"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+          />
+        </svg>
+      </div>
+      <div
+        className="emotion-2"
+      >
+        Option 3
+      </div>
+    </li>
+  </ul>
+  <ul
+    className="emotion-19"
+    id={undefined}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseMove={[Function]}
+    role="group"
+    selected={undefined}
+    tabIndex="-1"
+    unselect={true}
+  >
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-4"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-2"
+      >
+        Option 4
+      </div>
+    </li>
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-5"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-2"
+      >
+        Option 5
+      </div>
+    </li>
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-6"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-2"
+      >
+        Option 6
+      </div>
+    </li>
+  </ul>
+  <ul
+    className="emotion-12"
+    id={undefined}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseMove={[Function]}
+    role="group"
+    selected={undefined}
+    tabIndex="-1"
+    unselect={true}
+  >
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-7"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-1"
+      >
+        <svg
+          className="emotion-0"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+          />
+        </svg>
+      </div>
+      <div
+        className="emotion-2"
+      >
+        Option 7
+      </div>
+    </li>
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-8"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-1"
+      >
+        <svg
+          className="emotion-0"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+          />
+        </svg>
+      </div>
+      <div
+        className="emotion-2"
+      >
+        Option 8
+      </div>
+    </li>
+    <li
+      aria-selected={false}
+      className="emotion-3"
+      disabled={undefined}
+      id="option-9"
+      multiple={false}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      role="option"
+      selected={false}
+    >
+      <div
+        className="emotion-1"
+      >
+        <svg
+          className="emotion-0"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+          />
+        </svg>
+      </div>
+      <div
+        className="emotion-2"
+      >
+        Option 9
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
 .emotion-33 {
   overflow-y: auto;
@@ -96,6 +524,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -107,6 +536,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -230,6 +660,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -308,6 +739,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -476,6 +908,7 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <ul
     className="emotion-6"
@@ -487,6 +920,7 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -565,6 +999,7 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -643,6 +1078,7 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -798,6 +1234,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -809,6 +1246,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -932,6 +1370,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1010,6 +1449,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1260,6 +1700,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     ]
   }
   tabIndex="0"
+  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -1277,6 +1718,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       ]
     }
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1406,6 +1848,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       ]
     }
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1490,6 +1933,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       ]
     }
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1734,6 +2178,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -1745,6 +2190,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1868,6 +2314,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1946,6 +2393,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     role="group"
     selected={undefined}
     tabIndex="-1"
+    unselect={true}
   >
     <li
       aria-selected={false}

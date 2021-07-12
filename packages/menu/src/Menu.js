@@ -12,6 +12,10 @@ export default class Menu extends Component {
      */
     checkmark: PropTypes.bool,
     /**
+     * Shows a ability of checkmark to be unchecked if required
+     */
+    unselect: PropTypes.bool,
+    /**
      * Accepts Option components
      */
     children: PropTypes.node.isRequired,
@@ -50,12 +54,14 @@ export default class Menu extends Component {
   };
 
   static defaultProps = {
-    multiple: false
+    multiple: false,
+    unselect: true
   };
 
   render() {
     const {
       checkmark,
+      unselect,
       children,
       defaultSelected,
       divider,
@@ -82,6 +88,7 @@ export default class Menu extends Component {
             onFocus={handleFocus}
             onKeyDown={onKeyDown}
             selected={selected}
+            unselect={unselect}
           >
             {({
               getActiveOption,
@@ -117,6 +124,7 @@ export default class Menu extends Component {
                 setHighlightIndex={setHighlightIndex}
                 setOptionsInfo={setOptionsInfo}
                 setPreviousEvent={setPreviousEvent}
+                unselect={unselect}
                 stylesheet={stylesheet}
               >
                 {children}

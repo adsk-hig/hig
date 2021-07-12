@@ -97,7 +97,8 @@ export default class MenuGroupPresenter extends Component {
       setActiveOption,
       setHighlightIndex,
       setOptionsInfo,
-      setPreviousEvent
+      setPreviousEvent,
+      unselect
     } = this.props;
     const payload = {
       ...props,
@@ -118,7 +119,8 @@ export default class MenuGroupPresenter extends Component {
       setActiveOption,
       setHighlightIndex,
       setOptionsInfo,
-      setPreviousEvent
+      setPreviousEvent,
+      unselect
     };
 
     return <Menu {...payload} />;
